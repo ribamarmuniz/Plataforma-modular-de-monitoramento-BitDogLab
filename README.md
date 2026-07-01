@@ -79,8 +79,6 @@ Desenvolver uma plataforma de monitoramento ambiental laboratorial de baixo cust
 
 ## Imagens do Projeto
 
-> Para que as imagens apareçam corretamente no GitHub, mantenha a pasta `assets/` na raiz do repositório.
-
 ### Montagem do Hardware
 
 ![Montagem do sistema](assets/sistema-montado.png)
@@ -100,39 +98,6 @@ Desenvolver uma plataforma de monitoramento ambiental laboratorial de baixo cust
 ### Exportação de Dados em CSV
 
 ![Dados exportados em CSV](assets/dados-exportados-csv.png)
-
----
-
-## Como Adicionar Imagens no README
-
-Para adicionar imagens no GitHub, crie uma pasta chamada `assets` dentro do repositório e coloque os arquivos de imagem nela.
-
-Estrutura sugerida:
-
-```text
-.
-├── README.md
-├── assets/
-│   ├── sistema-montado.png
-│   ├── dashboard-completo.png
-│   ├── dashboard-responsivo.png
-│   ├── funcionalidades-dashboard.png
-│   └── dados-exportados-csv.png
-├── CMakeLists.txt
-└── src/
-```
-
-Depois, referencie a imagem no Markdown usando:
-
-```markdown
-![Descrição da imagem](assets/nome-da-imagem.png)
-```
-
-Exemplo:
-
-```markdown
-![Montagem do sistema](assets/sistema-montado.png)
-```
 
 ---
 
@@ -246,93 +211,6 @@ Esse recurso permite analisar posteriormente o comportamento ambiental em ferram
 
 ---
 
-## Como Executar o Projeto
-
-> Ajuste os comandos conforme a estrutura real do seu repositório e a instalação do Pico SDK no seu ambiente.
-
-### 1. Clonar o Repositório
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-
-Esse comando baixa o projeto do GitHub para sua máquina.
-
-### 2. Acessar a Pasta do Projeto
-
-```bash
-cd seu-repositorio
-```
-
-Esse comando entra na pasta onde estão os arquivos do projeto.
-
-### 3. Criar a Pasta de Build
-
-```bash
-mkdir build
-cd build
-```
-
-A pasta `build` é usada para armazenar os arquivos gerados durante a compilação.
-
-### 4. Gerar os Arquivos de Compilação com CMake
-
-```bash
-cmake ..
-```
-
-Esse comando prepara o projeto para ser compilado usando o Pico SDK.
-
-### 5. Compilar o Firmware
-
-```bash
-make
-```
-
-Esse comando compila o código-fonte e gera o arquivo `.uf2`, que será gravado no Raspberry Pi Pico W.
-
-### 6. Gravar no Raspberry Pi Pico W
-
-1. Pressione o botão `BOOTSEL` do Raspberry Pi Pico W.
-2. Conecte o Pico W ao computador via USB.
-3. Solte o botão `BOOTSEL`.
-4. Copie o arquivo `.uf2` gerado para a unidade que aparecer no sistema.
-
-Após isso, o dispositivo será reiniciado e executará o firmware.
-
----
-
-## Configuração de Wi-Fi
-
-No código-fonte, configure as credenciais da rede Wi-Fi:
-
-```c
-#define WIFI_SSID "NOME_DA_REDE"
-#define WIFI_PASSWORD "SENHA_DA_REDE"
-```
-
-Após a conexão, o endereço IP do dispositivo será exibido no console serial. Use esse IP no navegador para acessar o dashboard.
-
-Exemplo:
-
-```text
-http://192.168.0.100
-```
-
----
-
-## Exemplo de Uso
-
-1. Ligue o Raspberry Pi Pico W.
-2. Aguarde a conexão com a rede Wi-Fi.
-3. Verifique o endereço IP no monitor serial.
-4. Acesse o IP pelo navegador.
-5. Visualize os dados ambientais em tempo real.
-6. Ative ou desative sensores e alarmes conforme necessário.
-7. Baixe o arquivo CSV para análise histórica.
-
----
-
 ## Resultados Obtidos
 
 O sistema demonstrou funcionamento estável, com leitura periódica dos sensores, exibição dos dados em tempo real e resposta rápida aos comandos do usuário.
@@ -370,35 +248,11 @@ Durante os testes, o dashboard apresentou os dados ambientais de forma clara e r
 
 ---
 
-## Observação Sobre Imagens
-
-As imagens do hardware e do dashboard podem ser mantidas no repositório dentro da pasta `assets/`.
-
-Para imagens de componentes retiradas de sites externos, recomenda-se verificar a licença de uso ou substituir por fotos próprias antes da publicação pública no GitHub.
-
----
-
 ## Autor
 
 **José Ribamar Cerqueira Muniz**
 
 Projeto desenvolvido no âmbito do curso **EMBARCATECH**, no Instituto Federal de Educação, Ciência e Tecnologia do Maranhão - Campus Monte Castelo.
-
----
-
-## Licença
-
-Este projeto pode ser distribuído como software livre.
-
-Sugestão de licença:
-
-```text
-MIT License
-```
-
-Caso utilize outra licença, atualize esta seção conforme a necessidade do projeto.
-
----
 
 ## Status do Projeto
 
